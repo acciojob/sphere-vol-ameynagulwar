@@ -6,7 +6,7 @@ var calculateButton = document.getElementById("submit");
 // Function to calculate the volume of a sphere
 function volume_sphere(radius) {
   var volume = (4/3) * Math.PI * Math.pow(radius, 3);
-  return volume; // Round the volume to 2 decimal places
+  return volume.toFixed(4); // Round the volume to 2 decimal places
 }
 
 // Event listener for the form submission

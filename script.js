@@ -8,7 +8,14 @@ function volume_sphere() {
 	let volume = (4/3) * Math.PI * Math.pow(radius, 3);
 	document.getElementById('volume').value = volume;
 }
+// Get the button element with id 'submit'
+let calculateButton = document.getElementById("submit");
 
+// Add an event listener for the click event on the button
+calculateButton.addEventListener("click", function(event) {
+  event.preventDefault(); // Prevent form submission
+  volume_sphere(); // Call the volume_sphere function
+});
 // Event listener for the form submission
 
 

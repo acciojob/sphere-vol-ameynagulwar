@@ -1,24 +1,14 @@
 // Get references to the form elements
 // Get references to the form elements
-var radiusInput = document.getElementById("radius");
-var volumeOutput = document.getElementById("volume");
-var calculateButton = document.getElementById("submit");
+
 
 // Function to calculate the volume of a sphere
-function volume_sphere(radius) {
-  if (isNaN(radius)) {
-    return "Invalid input";
-  }
-  var volume = (4/3) * Math.PI * Math.pow(radius, 3);
-  return volume.toFixed(4); // Round the volume to 2 decimal places
+function volume_sphere() {
+  let radius = document.getElementById('radius').value;
+	let volume = (4/3) * Math.PI * Math.pow(radius, 3);
+	document.getElementById('volume').value = volume;
 }
 
 // Event listener for the form submission
-calculateButton.addEventListener("click", function(event) {
-  event.preventDefault(); // Prevent form submission
-  var radiusValue = parseFloat(radiusInput.value);
-  var volume = volume_sphere(radiusValue);
-  volumeOutput.value = volume;
-});
 
 
